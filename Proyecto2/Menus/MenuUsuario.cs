@@ -17,7 +17,7 @@ namespace Proyecto2.Menus
 #pragma warning disable CS0649 // El campo 'MenuUsuario.estado2' nunca se asigna y siempre tendrá el valor predeterminado false
         public static bool estado2;
 #pragma warning restore CS0649 // El campo 'MenuUsuario.estado2' nunca se asigna y siempre tendrá el valor predeterminado false
-        private const string ruta_usuarios = @"C:\Users\usuario\Desktop\Usuarios.json";
+        private const string ruta_usuarios = @"%USERPROFILE%\Desktop\Usuarios.json";
         public static List<Usuario> Usuarios { get; private set; }
         public static void Inicializar()
         {
