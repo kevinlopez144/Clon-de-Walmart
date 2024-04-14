@@ -247,5 +247,10 @@ namespace Proyecto2
         {
 
         }
+
+        private void MenuDeProductos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
