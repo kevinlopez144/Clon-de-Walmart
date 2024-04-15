@@ -13,7 +13,11 @@ namespace Proyecto2.Menus
     internal class MenuPedido
     {
         public static string rd { get; set; }
-        private const string ruta_pedidos = @"C:\Users\usuario\Desktop\Pedidos.json";
+        //private const string NombreArchivo = "Pedidos.json"; // Nombre del archivo JSON
+        //private string rutaArchivoJson; // Variable para almacenar la ruta del archivo JSON
+        //private static string directorioAplicacion = Application.StartupPath;
+        //private static string ruta_pedidos = Path.Combine(directorioAplicacion, NombreArchivo);
+        private const string ruta_pedidos = @"\users\kevin\Pedidos.json";
         public static List<Pedido> pedidos { get; private set; }
         public static bool estado;
         public static bool estado2;

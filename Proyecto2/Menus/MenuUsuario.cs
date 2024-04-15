@@ -8,16 +8,23 @@ using Newtonsoft.Json;
 using System.Text.Json;
 using System.IO;
 using System.Windows.Forms;
+using iTextSharp.text;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace Proyecto2.Menus
 {
     internal class MenuUsuario
     {
+        private const string NombreArchivo = "Usuario.json"; // Nombre del archivo JSON
+        private string rutaArchivoJson; // Variable para almacenar la ruta del archivo JSON
+        private static string directorioAplicacion = Application.StartupPath;
+
         public static bool estado;
 #pragma warning disable CS0649 // El campo 'MenuUsuario.estado2' nunca se asigna y siempre tendrá el valor predeterminado false
         public static bool estado2;
 #pragma warning restore CS0649 // El campo 'MenuUsuario.estado2' nunca se asigna y siempre tendrá el valor predeterminado false
-        private const string ruta_usuarios = @"%USERPROFILE%\Desktop\Usuarios.json";
+        private static string ruta_usuarios = Path.Combine(directorioAplicacion, NombreArchivo);
         public static List<Usuario> Usuarios { get; private set; }
         public static void Inicializar()
         {
@@ -29,6 +36,7 @@ namespace Proyecto2.Menus
             else
             {
                 Usuarios = new List<Usuario>();
+                File.WriteAllText(ruta_usuarios, "{}");
 
             }
             
